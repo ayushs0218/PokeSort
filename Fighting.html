@@ -21,6 +21,48 @@
         </div>
     </center>
 </header>
+
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openRules(event, 'Rules')">TCG RULES</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Rules" class="tabcontent">
+        <h3>TCG Tournament Rules</h3>
+        <ol>
+            <li>Deck Must Include 60 Cards.</li>
+            <li>Deck Must Contain Energy Cards Sufficient Enough To Attack.</li>
+            <li>In The Initial Turn Of Both Players, There Must Be An Active Basic Pokémon And An Optional
+                Benched Pokémon.</li>
+            <li>In Order To Play A Pokémon Of An Upper Evolution, That Pokémon Must Be Evolved To With
+                Previous Evolutions.</li>
+            <li>Top 6 Cards Of The Shuffled Deck Goes To The "Prize Card" Pile.</li>
+            <li>Players Are Allowed To Put Basic Pokémon Cards Immediately From Their Hand To the Bench.</li>
+            <li>Players May Evolve As Many Pokémon As They Want In Their Turn.</li>
+            <li>Players May Only Attach 1 Energy Card To 1 Pokémon Card, Once Per Turn.</li>
+            <li>Players May Play As Many Trainer Cards, But Only One Supporter Card Per Turn. </li>
+            <li>Players Are Only Allowed To Retreat 1 Pokémon Per Turn.</li>
+            <li>Players May Use As Many Abilities As They Wish Per Turn.</li>
+        </ol>
+        <span onclick="this.parentElement.style.display='none'">Click Here to Close</span>
+    </div>
+
+    <script>
+        function openRules(evt, myRules) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(myRules).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 <body>
     <center>
             <div class="nav3"">
